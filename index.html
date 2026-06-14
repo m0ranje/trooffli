@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Моё портфолио — Трофимова Юля</title>
+    <link rel="stylesheet" href="styles.css?v=4">
+  </head>
+  <body>
+    <main class="site">
+      <section class="hero" aria-label="Главный экран портфолио">
+        <div class="stage" id="stage">
+          <img
+            class="layer layer-bg layer-bg-desktop"
+            src="2e0dcfc0-50d5-4c7a-a559-76b0ba33be52.png"
+            alt=""
+            draggable="false"
+          >
+          <img
+            class="layer layer-bg layer-bg-mobile"
+            src="d24a1b7e-8781-46ba-9aab-0f53844754fd.png"
+            alt=""
+            draggable="false"
+          >
+
+          <img class="layer star star-big" src="star.png" alt="" draggable="false">
+          <img class="layer star star-small" src="star2.png" alt="" draggable="false">
+          <img class="layer title-card" src="main.png" alt="Моё портфолио. Трофимова Юля" draggable="false">
+          <img class="layer person" src="person.png" alt="Иллюстрация Юли" draggable="false">
+          <img class="layer speech" src="rada.png" alt="Рада, что ты здесь!" draggable="false">
+
+          <div class="spark spark-one" aria-hidden="true"></div>
+          <div class="spark spark-two" aria-hidden="true"></div>
+          <div class="spark spark-three" aria-hidden="true"></div>
+
+          <nav class="hero-actions" aria-label="Разделы портфолио">
+            <button
+              class="hero-button is-active"
+              type="button"
+              data-panel="about"
+              aria-label="Обо мне"
+              aria-pressed="true"
+            ></button>
+            <button
+              class="hero-button"
+              type="button"
+              data-panel="life"
+              aria-label="Моя жизнь"
+              aria-pressed="false"
+            ></button>
+          </nav>
+        </div>
+      </section>
+
+      <section class="page page-about" id="about-page" data-page="about" aria-label="Обо мне">
+        <div class="page-shell">
+          <nav class="page-nav" aria-label="Навигация">
+            <button class="nav-button" type="button" data-panel="home">На главную</button>
+            <button class="nav-button" type="button" data-panel="life">Моя жизнь</button>
+          </nav>
+
+          <div class="paper-title">
+            <p>Обо мне</p>
+            <h1>Трофимова Юля</h1>
+          </div>
+
+          <div class="about-grid">
+            <article class="paper-card">
+              <span>01</span>
+              <h2>Как меня зовут</h2>
+              <p>Меня зовут Юля. Это мой портфолио-сайт, где я собираю важные моменты, идеи и немного своего настроения.</p>
+            </article>
+
+            <article class="paper-card">
+              <span>02</span>
+              <h2>Сколько мне лет</h2>
+              <p>Мне 19 лет. Я открытая, внимательная к деталям и люблю делать проекты, в которых есть душа и свой стиль.</p>
+            </article>
+
+            <article class="paper-card">
+              <span>03</span>
+              <h2>Где я учусь</h2>
+              <p>Я учусь в Амурском Педагогическом Колледже. Мне нравится узнавать новое и пробовать себя в творческих заданиях.</p>
+            </article>
+
+            <article class="paper-card">
+              <span>04</span>
+              <h2>Чем увлекаюсь</h2>
+              <p>Мне нравятся фотографии, дизайн, прогулки, красивые детали и маленькие идеи, из которых постепенно рождаются большие проекты.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="page page-life" id="life-page" data-page="life" aria-label="Моя жизнь">
+        <div class="page-shell">
+          <nav class="page-nav" aria-label="Навигация">
+            <button class="nav-button" type="button" data-panel="home">На главную</button>
+            <button class="nav-button" type="button" data-panel="about">Обо мне</button>
+          </nav>
+
+          <div class="paper-title">
+            <p>Моя жизнь</p>
+            <h1>Фотографии и моменты</h1>
+          </div>
+
+          <div class="photo-actions">
+            <label class="upload-button">
+              Добавить фото
+              <input id="photo-input" type="file" accept="image/*" multiple>
+            </label>
+          </div>
+
+          <div class="photo-grid" id="photo-grid">
+            <figure class="photo-card">
+              <img src="moment.jpg" alt="Любимый момент из жизни Юли" loading="lazy">
+              <figcaption>Любимый момент</figcaption>
+            </figure>
+            <figure class="photo-card">
+              <img src="friends.jpg" alt="Юля с друзьями" loading="lazy">
+              <figcaption>Друзья</figcaption>
+            </figure>
+            <figure class="photo-card">
+              <img src="tvorchestvo.jpg" alt="Творчество Юли" loading="lazy">
+              <figcaption>Творчество</figcaption>
+            </figure>
+            <figure class="photo-card">
+              <img src="progulka.jpg" alt="Прогулка" loading="lazy">
+              <figcaption>Прогулки</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <div class="photo-viewer" id="photo-viewer" aria-hidden="true">
+        <button class="viewer-close" type="button" aria-label="Закрыть просмотр">Закрыть</button>
+        <button class="viewer-control viewer-prev" type="button" aria-label="Предыдущее фото">Назад</button>
+        <figure class="viewer-frame">
+          <img id="viewer-image" src="" alt="">
+          <figcaption id="viewer-caption"></figcaption>
+        </figure>
+        <button class="viewer-control viewer-next" type="button" aria-label="Следующее фото">Вперед</button>
+      </div>
+    </main>
+
+    <script src="script.js?v=5"></script>
+  </body>
+</html>
